@@ -16,7 +16,7 @@ store: true
 {%- continue -%}
 {%- endif -%}
 
-{%- if site.data.itemdata[item.defname].IsWeapon -%}
+{%- if item.category == "Weapons" or item.category == "Melee weapons" or item.category == "Ranged weapons"  -%}
 {%- assign weaponsForDisplay = weaponsForDisplay | push: item | sort: "abr" -%}
 {%- continue -%}
 {%- endif -%}
